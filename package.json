@@ -20,7 +20,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc -p tsconfig.lib.json",
+    "build": "vite build",
+    "build:web": "vite build",
+    "build:lib": "vite build --mode lib && tsc -p tsconfig.lib.json",
+    "build:all": "npm run build:web && npm run build:lib",
     "preview": "vite preview"
   },
   "peerDependencies": {
